@@ -56,7 +56,7 @@ main
 	width: 100%;
 	position: relative;
 }
-#parcours
+# parcours
 {
     width: 33%;
     height: 280px;
@@ -79,7 +79,7 @@ font-family: cursive;
 p {
 	text-align: justify;
 }
-#ambitions
+# ambitions
 {
     width: 33%;
     height:280px;
@@ -93,7 +93,7 @@ p {
     font-size: 15px;
 	
 }	
-#experience
+# experience
 {
     width:33%;
     height: 280px;
@@ -203,7 +203,7 @@ footer
     float:left;
     overflow:hidden;
 }
-/*portfolio*/
+//*portfolio*//
     .portfolio-wrapper {
         overflow:hidden;
         position: relative !important;
@@ -223,7 +223,7 @@ footer
         bottom:-40px;
     }
 	
-/*formulaire*/
+//*formulaire*//
 #message
 {
 	width: 250px;
