@@ -203,7 +203,7 @@ footer
     float:left;
     overflow:hidden;
 }
-//*portfolio*//
+
     .portfolio-wrapper {
         overflow:hidden;
         position: relative !important;
@@ -222,7 +222,7 @@ footer
         height:40px;
         bottom:-40px;
     }
-	
+
 //*formulaire*//
 #message
 {
