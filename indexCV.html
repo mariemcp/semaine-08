@@ -1,0 +1,325 @@
+<!DOCTYPE html/>
+<html>
+    <head>
+		<title>Mon CV portfolio</title>
+        <meta charset="utf-8" />
+        <script src="/js/jquery-1.11.3.min.js"></script>
+	 	<script src="/js/bootstrap.min.js"></script>
+	 	<script src="/js/scrollmovement.js"></script>
+	 	<script src="/js/addheight.js"></script>
+		
+		
+        
+        
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> <!--lien vers le CDN de Bootstrap-->
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.min.js"></script> <!--effet "hover" flotter-->
+		<script type="text/javascript" src="js/jquery.mixitup.min.js"></script> <!--effet filtre-->
+		<script type="text/javascript">
+    $(function () {
+        
+        var filterList = {
+        
+            init: function () {
+            
+                // Plugin Mixitup, qui permet de filtrer les vignettes par catégorie
+                $('#portfoliolist').mixitup({
+                    targetSelector: '.portfolio',
+                    filterSelector: '.filter',
+                    effects: ['fade'],
+                    easing: 'snap',
+                    // call the hover effect
+                    onMixEnd: filterList.hoverEffect()
+                });             
+            
+            },
+            
+            hoverEffect: function () {
+            
+                // Fonction pour l'effet "hover"
+                $('#portfoliolist .portfolio').hover(
+                    function () {
+                        $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+                        $(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');             
+                    },
+                    function () {
+                        $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+                        $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');                               
+                    }       
+                );              
+            
+            }
+        };
+        
+        // Lance les deux fonctions "hover" et "filtre"
+        filterList.init();
+        
+        
+    }); 
+    </script>
+    </head>
+    
+    <body data-spy="scroll" data-target=".navbar">
+        <div class="container-fluid">
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle">
+							<span class="icon.bar"></span>
+							<span class="icon.bar"></span>
+							<span class="icon.bar"></span>
+						</button>
+						<a href="#entete" class="navbar-brand">Marie-Christine PERIN</a>
+					</div>
+					<div class="collapse navbar-collapse">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#parcours">Parcours</a> </li>
+							<li><a href="#ambitions">Ambitions</a></li>
+							<li><a href="#experience">Expériences</a></li>
+							<li><a href="#contacts">Contacts</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#formulaire">Formulaire</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>	
+			
+		
+		
+			<header>    
+				<div class="row" id="entete">
+					</br>
+					</br>
+					<h1> <strong>Marie-Christine PERIN</strong></h1>
+					<h2><em>Créatrice de sites et formatrice</em></h2>
+					<img src="images/ordinateur.gif" class="ordinateur"/>
+					</br>
+					</br>
+				
+				<div>
+			</header>
+       
+        
+			<main>
+				<div class="row">
+					<div class="col-md-4" class"parcours" id="parcours">
+						<div class="container">
+							</br>
+							</br>
+							<h3> Parcours avant la formation Simplonline</h3>
+                
+								<ul>
+									<li>Baccalauréat C </li>
+									<li>Formation analyste programmeur à Strasbourg (67)</li>
+									<li>3 degrés de comptabilité par l'Uion des Experts Comptables (75)</li>
+									<li>BCCEA et AGEA par la Chambre des Métiers (36)</li>
+									<li> Création du site internet de <a href="https://maconneriedenisperin.pagesperso-orange.fr/"><strong color: "red">l'entreprise de maçonnerie de mon mari</strong></a>
+									<li>CAP Petite Enfance en juin 2014</li> 
+								</ul>
+						</div>
+					</div>
+				
+				
+					<div class="col-md-4" class="ambitions" id="ambitions">
+						<div class="container">
+							</br>
+							</br>
+							<h3> Mes ambitions</h3>
+							<p> Cette formation va m'aider à réactualiser mes connaissances en informatique.</p> </br>
+							<p> Apprendre de nouveaux langages et voir l'évolution de la programmation est passionnant.</p>
+						</div>
+					</div>
+			
+					<div class="col-md-4" class="experience" id="experience">
+						<div class="container">
+							</br>
+							</br>
+							<h3>Expériences</h3>
+							<p>J'ai travaillé au service informatique à Air Inter durant ma formation.</p>
+							<p>En arrivant dans l'Indre en 1987, j'ai dû changer de voie et je me suis dirigée vers la comptabilité.</p>
+						</div>
+					</div>
+				</div>
+		
+	<!-- début porfolio-->	
+		<div class="contenu" id="portfolio">
+            <h2>Mon portfolio</h2>
+					<!--data-filter permet de filtrer les vignettes par catégorie-->
+				<ul id="filters" class="clearfix row">
+					<li><span class="filter active" data-filter="cat1 cat2 cat3 cat4">Toutes mes catégories</span></li>
+					<li><span class="filter" data-filter="cat1">HTML/CSS</span></li>
+					<li><span class="filter" data-filter="cat2">Javascript</span></li>
+					<li><span class="filter" data-filter="cat3">Open Classrooms</span></li>
+					<li><span class="filter" data-filter="cat4">Ruby</span></li>
+				</ul>
+					
+			<div id="portfoliolist"> <!--La div contenant les vignettes des projets-->
+			
+				<div class="portfolio cat1" data-cat="cat1">
+                    <div class="portfolio-wrapper">         
+                        <img src="img_portfolio/1logohtml.jpg" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">Logo HTML/CSS</a>
+                                <span class="text-category">HTML/CSS</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div>    
+				<div class="portfolio cat1" data-cat="cat1">
+                    <div class="portfolio-wrapper">
+                        <img src="img_portfolio/1divshot.jpg" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">Divshot</a>
+                                <span class="text-category">HTML/CSS</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div>				
+                       
+                
+                <div class="portfolio cat2" data-cat="cat2">
+                    <div class="portfolio-wrapper">             
+                        <img src="img_portfolio/2logojs.jpg" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">Logo Javascript</a>
+                                <span class="text-category">Javascript</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div>     
+				<div class="portfolio cat2" data-cat="cat2">
+                    <div class="portfolio-wrapper">         
+                        <img src="img_portfolio/2javascript.jpg" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">Javascript</a>
+                                <span class="text-category">Javascript</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="portfolio cat3" data-cat="cat3">
+                    <div class="portfolio-wrapper">         
+                        <img src="img_portfolio/3logoocr.png" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">Logo Open Classrooms</a>
+                                <span class="text-category">Open Classrooms</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div> 
+				<div class="portfolio cat3" data-cat="cat3">
+                    <div class="portfolio-wrapper">         
+                        <img src="img_portfolio/3certifocr.jpg" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">Certificat réussite</a>
+                                <span class="text-category">Open Classrooms</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div> 
+				
+				<div class="portfolio cat4" data-cat="cat4">
+                    <div class="portfolio-wrapper">         
+                        <img src="img_portfolio/4logoruby.png" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">Logo Ruby</a>
+                                <span class="text-category">Ruby</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="portfolio cat4" data-cat="cat4">
+                    <div class="portfolio-wrapper">         
+                        <img src="img_portfolio/4openfoodfacts.jpg" alt="" />
+                        <div class="label">
+                            <div class="label-text">
+                                <a class="text-title">API Open Food Facts</a>
+                                <span class="text-category">Ruby</span>
+                            </div>
+                            <div class="label-bg"></div>
+                        </div>
+                    </div>
+                </div>  
+				
+				              
+            </div> 
+    <!--fin du portfolio-->    
+        </div><!-- fin du container-->
+
+    </main>
+				
+				 
+                       
+        
+			<footer>
+				<div class="bordure">
+					<div class="container">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5486.418827627012!2d2.0081810329231664!3d46.56332396745152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fa4be473c19ef3%3A0xde4f654100969ac0!2sValidet%2C+36400+Briantes!5e0!3m2!1sfr!2sfr!4v1448891613322" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+					
+					
+						<div class="contacts" id="contacts">
+							<div class="container">
+								<p>Coordonnées :</p>    
+								<p>mail : mariechristineperin@orange.fr</p>
+								<p>4 le grand Vignoble de Validé - 36400 BRIANTES</p>
+							</div>
+						</div>
+				</div>
+				
+		<!--formulaire-->
+			<div class="formulaire" id="formulaire">
+				<div class="container">
+		
+
+				
+					<form method="post" action="traitement.php">
+						<fieldset>
+
+							<legend><strong>Formulaire de contact</strong></legend>
+					
+							<p><label for="nom">Votre nom</label> </br>
+							<input type="text" name="nom" id="nom" size="50" placeholder="saisissez votre nom" autofocus /></p>
+							</br>
+							<p><label for="prenom">Votre prénom</label></br>
+							<input type="text" firstname="prenom" id="prenom" size="50" placeholder="saisissez votre prénom" /></p>
+							</br>
+							<p><label for="mail">Votre e-mail</label></br>
+							<input type="email" name="mail" id="mail" size="50"placeholder="saisissez votre adresse mail" required /></p>
+							</br>
+							<p><label for="message">Votre message</label></br>
+							<textarea name="message" id="message"  rows="10" cols="50" placeholder="saisissez votre message" /></textarea></p>
+							</br>
+							<input type="submit" value="Envoyer"/>
+							<input type="submit" value="Annuler"/>
+							
+						</fieldset>
+					</form>	
+				</div>
+			</div>	
+		<!--fin du formulaire-->
+			</footer>
+        </div>
+        
+    </body>
+    
+</html>

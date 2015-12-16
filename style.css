@@ -1,0 +1,239 @@
+body
+{
+    background-image: url("images/crossword.png");
+    font-family: "Garamond";
+    padding: 0;
+    margin: 0;
+}
+
+h1
+{
+    font-size: 2em;
+}
+h2
+{
+	color: #CD853F	
+}
+h3
+{
+    color: #CD853F;
+	border: 3px #cd853f solid;
+	border-radius: 20px;
+	
+}
+.ordinateur
+{
+    width: 100px;
+    height: 100px;
+	border-radius: 10px;
+}
+header
+{
+    background: url("images/extra_clean_paper.png");
+    text-align: center;
+	padding: 10px;
+	width: 100%;
+}
+main
+{
+	width:90%;
+	margin:auto;
+	
+}
+
+.container-fluid
+{
+	position-top: fixed;
+	position: relative;
+	
+}
+.col-md-4
+{
+	width: 30%
+}
+.container 
+{
+	width: 100%;
+	position: relative;
+}
+# parcours
+{
+    width: 33%;
+    height: 280px;
+    display: inline-block;
+	position: absolute;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right:20px;
+    line-height: 20px;
+    font-size: 15px;
+    
+}
+
+a
+{color: red;
+font-size: 15px;
+font-family: cursive;	
+}
+p {
+	text-align: justify;
+}
+# ambitions
+{
+    width: 33%;
+    height:280px;
+    display:inline-block;
+	position: absolute;
+	vertical-align: top;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 20px;
+    font-size: 15px;
+	
+}	
+# experience
+{
+    width:33%;
+    height: 280px;
+    display: inline-block;
+	position: absolute;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 20px;
+    font-size: 15px;
+}
+.contacts
+{
+    display: inline-block;
+    margin-left: 30px;
+    vertical-align: middle;
+}
+.iframe
+{
+    width: 50%;
+    vertical-align: middle;
+}
+
+footer
+{
+    background: url("images/gplaypattern.png");
+    text-align: center;
+	
+}
+#info {
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;              
+    background:#fcf8e3;
+    border:1px solid  #fbeed5;
+    width:95%;
+    max-width:900px;
+    margin:0 auto 40px auto;
+    font-family:arial;
+    font-size:12px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+    #info .info-wrapper {
+        padding:10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+
+    }
+    
+    #info a {
+        color:#c09853;
+        text-decoration:none;
+    }
+    
+    #info p {
+        margin:5px 0 0 0;
+    }
+
+
+.contenu { 
+    position: relative; 
+    width: 960px; 
+    margin: 0 auto; 
+    -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;  
+}
+ 
+#filters {
+    margin:1%;
+    padding:0;
+    list-style:none;
+}
+
+    #filters li {
+        float:left;
+    }
+    
+    #filters li span {
+        display: block;
+        padding:5px 20px;       
+        text-decoration:none;
+        color:#666;
+        cursor: pointer;
+    }
+    
+    #filters li span.active {
+        background: #e95a44;
+        color:#fff;
+    }
+ 
+
+ 
+#portfoliolist .portfolio {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    width:23%;
+    margin:1%;
+    display:none;
+    float:left;
+    overflow:hidden;
+}
+//*portfolio*//
+    .portfolio-wrapper {
+        overflow:hidden;
+        position: relative !important;
+        background: #666;
+        cursor:pointer;
+    }
+
+    .portfolio img {
+        max-width:100%;
+        position: relative;
+    }
+    
+    .portfolio .label {
+        position: absolute;
+        width: 100%;
+        height:40px;
+        bottom:-40px;
+    }
+	
+//*formulaire*//
+#message
+{
+	width: 250px;
+	height: 200px;
+}
+.formulaire
+{
+    display: inline-block;
+    margin-left: 50px;
+    vertical-align: middle;
+	background: url("images/extra_clean_paper.png");
+}
+
